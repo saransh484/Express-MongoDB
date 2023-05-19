@@ -17,7 +17,7 @@ jobs:
           key: ${{ secrets.SSHKEY }}
           
           script: |
-            cd ~/backend
+            cd ~/backend/Express-MongoDB
             git pull origin main
             git status
             npm i
