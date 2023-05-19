@@ -41,6 +41,8 @@ jobs:
             git pull origin main
             echo "------ Pull Complete -------"
             git status
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
             echo "------ npm commands -------"
             npm i
             pm2 start app.js
