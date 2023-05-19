@@ -36,9 +36,12 @@ jobs:
           
           script: |
             cd ~/backend/Express-MongoDB
+            echo "------ cd to app --------"
+            ls
             git pull origin main
             echo "------ Pull Complete -------"
             git status
+            echo "------ npm commands -------"
             npm i
             pm2 start app.js
  
