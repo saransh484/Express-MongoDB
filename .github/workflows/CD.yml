@@ -1,4 +1,4 @@
-name: Deploy
+name: CD
 
 on: [push]
 
@@ -16,11 +16,10 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
           
-          script: ls
-            #script: |
-            #cd ~/backend
-            #git pull origin main
-            #git status
-            #npm i
-            #pm2 start app.js
+          script: |
+            cd ~/backend
+            git pull origin main
+            git status
+            npm i
+            pm2 start app.js
  
