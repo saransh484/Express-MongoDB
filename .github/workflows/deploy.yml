@@ -15,11 +15,12 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-
-          script: |
-            cd ~/backend
-            git pull origin main
-            git status
-            npm i
-            pm2 start app.js
+          
+          script: ls
+            #script: |
+            #cd ~/backend
+            #git pull origin main
+            #git status
+            #npm i
+            #pm2 start app.js
  
